@@ -7,15 +7,19 @@ import org.springframework.stereotype.Service;
 @Service
 public class TodoService {
 
+    
     private TodoRepository repository;
     private TodoValidator validator;
     private MailSender mailSender;
 
+    //Aqui estamos injetando a dependencia via Construtor.
+    @Autowired
     public TodoService(TodoRepository repository, TodoValidator validator, MailSender mailSender) {
         this.repository = repository;
         this.validator = validator;
         this.mailSender = mailSender;
     }
+
 
     public TodoEntity salvar(TodoEntity novoTodo) {
         validator.validar(novoTodo);
@@ -30,6 +34,11 @@ public class TodoService {
 
     public TodoEntity buscar(Integer id){
         return repository.findById(id).orElse(null);
+    }
+
+    public void utilizar(){
+        var todo = new TodoEntity();
+        validator.validar(todo);
     }
 
 
