@@ -1,6 +1,7 @@
 package br.com.project.carrosprod.todos;
 
 import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
 
 //Camada Service vai acionar o repository e será a nossa maneira de falar o que queremos fazer no banco de dados, além de ser onde salvamos as regas de negócio
 

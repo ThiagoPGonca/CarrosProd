@@ -1,3 +1,4 @@
+package br.com.project.carrosprod;
 import org.springframework.stereotype.Component;
 import org.springframework.beans.factory.annotation.Value;
 
@@ -11,9 +12,12 @@ public class ExemploValue{
     @Value("${spring.application.name}")
     private String nomeApplication;
 
+
     public void imprimirVariavel(){
         System.out.println(variavel);
     }
+
+
 
     public void imprimirApplicationName(){
         System.out.println(nomeApplication);

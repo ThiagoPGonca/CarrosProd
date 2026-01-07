@@ -9,3 +9,6 @@ spring:
 app:
     config:
         variavel: X
+        valor1: 500
+    montadora:
+        motor-padrao: 130
